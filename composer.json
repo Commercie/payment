@@ -1,0 +1,27 @@
+{
+  "name": "bartfeenstra/payment",
+  "description": "A library for processing payments.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bart Feenstra",
+      "email": "bart@mynameisbart.com"
+    }
+  ],
+  "require": {
+    "php": "~5.5 || ~7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "BartFeenstra\\Payment\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BartFeenstra\\Tests\\Payment\\": "tests/src"
+    }
+  }
+}
