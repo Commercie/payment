@@ -24,7 +24,7 @@ interface PaymentInterface extends LineItemCollectionInterface
      *
      * @return $this
      */
-    public function sePaymentStatus(PaymentStatusInterface $paymentStatus);
+    public function setPaymentStatus(PaymentStatusInterface $paymentStatus);
 
     /**
      * Gets the current payment status.
