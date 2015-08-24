@@ -16,6 +16,9 @@ interface PaymentMethodCapturePaymentInterface extends PaymentMethodInterface
     /**
      * Checks if the payment can be captured.
      *
+     * Implementations MUST call
+     * \BartFeenstra\Payment\EventDispatcher::canCapturePayment().
+     *
      * @return bool
      *   Whether the payment method can capture the payment.
      *
@@ -25,6 +28,9 @@ interface PaymentMethodCapturePaymentInterface extends PaymentMethodInterface
 
     /**
      * Captures the payment.
+     *
+     * Implementations MUST call
+     * \BartFeenstra\Payment\EventDispatcher::preCapturePayment().
      *
      * @return \BartFeenstra\Payment\Operation\OperationResultInterface
      *

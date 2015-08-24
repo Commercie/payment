@@ -24,6 +24,9 @@ interface PaymentMethodInterface extends PaymentAwareInterface
     /**
      * Checks if the payment can be executed.
      *
+     * Implementations MUST call
+     * \BartFeenstra\Payment\EventDispatcher::canExecutePayment().
+     *
      * @return bool
      *   Whether the payment method can execute the payment.
      */
@@ -35,6 +38,9 @@ interface PaymentMethodInterface extends PaymentAwareInterface
      * When executing a payment, it may be authorized, or authorized and captured.
      * After calling this method, more action may be required depending on the
      * return value of self::getExecutePaymentResult().
+     *
+     * Implementations MUST call
+     * \BartFeenstra\Payment\EventDispatcher::preExecutePayment().
      *
      * @return \BartFeenstra\Payment\Operation\OperationResultInterface
      *

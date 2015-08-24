@@ -20,6 +20,9 @@ interface PaymentInterface extends LineItemCollectionInterface
     /**
      * Sets a new payment status.
      *
+     * Implementations MUST call
+     * \BartFeenstra\Payment\EventDispatcher::postPaymentStatusChange().
+     *
      * @param \BartFeenstra\Payment\PaymentStatus\PaymentStatusInterface $paymentStatus
      *
      * @return $this
