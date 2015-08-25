@@ -34,8 +34,9 @@ interface EventDispatcherInterface
      * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will execute the payment.
      *
-     * @return bool
-     *   Whether the payment method can execute the payment.
+     * @return bool|null
+     *   TRUE or FALSE if the payment method can or cannot execute the payment.
+     *   NULL if insure.
      */
     public function canExecutePayment(PaymentMethodInterface $paymentMethod);
 
@@ -53,8 +54,9 @@ interface EventDispatcherInterface
      * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will capture the payment.
      *
-     * @return bool
-     *   Whether the payment method can capture the payment.
+     * @return |null
+     *   TRUE or FALSE if the payment method can or cannot capture the payment.
+     *   NULL if insure.
      */
     public function canCapturePayment(PaymentMethodInterface $paymentMethod);
 
@@ -72,8 +74,9 @@ interface EventDispatcherInterface
      * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will refund the payment.
      *
-     * @return bool
-     *   Whether the payment method can refund the payment.
+     * @return |null
+     *   TRUE or FALSE if the payment method can or cannot refund the payment.
+     *   NULL if insure.
      */
     public function canRefundPayment(PaymentMethodInterface $paymentMethod);
 
