@@ -2,12 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\LineItemCollectionInterface.
+ * Contains \BartFeenstra\LineItem\LineItemCollectionInterface.
  */
 
-namespace BartFeenstra\Payment;
-
-use BartFeenstra\Payment\LineItem\LineItemInterface;
+namespace BartFeenstra\Payment\LineItem;
 
 /**
  * Defines a line item collection.

@@ -7,7 +7,7 @@
 
 namespace BartFeenstra\Payment\Payment;
 
-use BartFeenstra\Payment\LineItemCollectionInterface;
+use BartFeenstra\Payment\LineItem\LineItemCollectionInterface;
 use BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface;
 use BartFeenstra\Payment\PaymentStatus\PaymentStatusInterface;
 
