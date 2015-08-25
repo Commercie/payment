@@ -21,7 +21,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "BartFeenstra\\Tests\\Payment\\": "tests/src"
+      "BartFeenstra\\Tests\\Payment\\": "tests"
     }
   }
 }
