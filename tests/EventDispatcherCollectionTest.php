@@ -36,7 +36,7 @@ class EventDispatcherCollectionTest extends \PHPUnit_Framework_TestCase
      * Provides data to self::testCanExecutePayment(),
      * self::testCanCapturedPayment(), and self::testCanRefundPayment().
      */
-    public function providerCanOperationPayment()
+    public function providerCanPerformPaymentMethodOperation()
     {
         return [
           [true, true, true],
@@ -78,7 +78,7 @@ class EventDispatcherCollectionTest extends \PHPUnit_Framework_TestCase
      * @covers ::addEventDispatcher
      * @covers ::aggregateTernaryValues
      *
-     * @dataProvider providerCanOperationPayment
+     * @dataProvider providerCanPerformPaymentMethodOperation
      *
      * @param bool|null $expectedResult
      *   TRUE for allowed, NULL for neutral, FALSE for forbidden.
@@ -139,7 +139,7 @@ class EventDispatcherCollectionTest extends \PHPUnit_Framework_TestCase
      * @covers ::addEventDispatcher
      * @covers ::aggregateTernaryValues
      *
-     * @dataProvider providerCanOperationPayment
+     * @dataProvider providerCanPerformPaymentMethodOperation
      *
      * @param bool|null $expectedResult
      *   TRUE for allowed, NULL for neutral, FALSE for forbidden.
@@ -200,7 +200,7 @@ class EventDispatcherCollectionTest extends \PHPUnit_Framework_TestCase
      * @covers ::addEventDispatcher
      * @covers ::aggregateTernaryValues
      *
-     * @dataProvider providerCanOperationPayment
+     * @dataProvider providerCanPerformPaymentMethodOperation
      *
      * @param bool|null $expectedResult
      *   TRUE for allowed, NULL for neutral, FALSE for forbidden.
