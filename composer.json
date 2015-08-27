@@ -1,6 +1,6 @@
 {
   "name": "bartfeenstra/payment",
-  "description": "A library for processing payments.",
+  "description": "A framework for defining and processing payments.",
   "license": "MIT",
   "authors": [
     {
