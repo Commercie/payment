@@ -29,7 +29,7 @@ interface OperationResultInterface
      * Gets the URL where the user can complete the operation.
      *
      * @return string|null
-     *   A URL (only if self::isInProgress() returns TRUE) or NULL if the
+     *   A URL (only if self::isCompleted() returns FALSE) or NULL if the
      *   operation cannot be completed (anymore).
      */
     public function getCompletionUrl();
