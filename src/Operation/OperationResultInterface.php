@@ -9,10 +9,6 @@ namespace BartFeenstra\Payment\Operation;
 
 /**
  * Defines an operation result.
- *
- * When operations can be initialized programmatically, but may require human
- * interaction to be completed, this interface provides calling code with
- * information to continue the human part of the operation.
  */
 interface OperationResultInterface
 {
@@ -26,12 +22,12 @@ interface OperationResultInterface
     public function isCompleted();
 
     /**
-     * Gets the URL where the user can complete the operation.
+     * Gets the instruction to continue the operation.
      *
-     * @return string|null
-     *   A URL (only if self::isCompleted() returns FALSE) or NULL if the
-     *   operation cannot be completed (anymore).
+     * @return \BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface|null
+     *   An instruction (only if self::isCompleted() returns FALSE) or NULL if
+     *   the operation cannot be continued (anymore).
      */
-    public function getCompletionUrl();
+    public function getContinuationInstruction();
 
 }

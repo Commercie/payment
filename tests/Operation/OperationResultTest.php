@@ -7,6 +7,7 @@
 
 namespace BartFeenstra\Tests\Payment\Operation;
 
+use BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface;
 use BartFeenstra\Payment\Operation\OperationResult;
 
 /**
@@ -18,13 +19,13 @@ class OperationResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * Provides self::testIsCompleted().
+     * Provides data to self::testIsCompleted().
      */
     public function providerIsCompleted()
     {
         return [
-          [true, 'http://example.com' . mt_rand()],
-          [false, null],
+          [false, $this->getMock(OperationContinuationInstructionInterface::class)],
+          [true, null],
         ];
     }
 
@@ -34,36 +35,36 @@ class OperationResultTest extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider providerIsCompleted
      */
-    public function testIsCompleted($expected, $completionUrl)
+    public function testIsCompleted($expected, $instruction)
     {
-        $sut = new OperationResult($completionUrl);
+        $sut = new OperationResult($instruction);
 
         $this->assertSame($expected, $sut->isCompleted());
     }
 
     /**
-     * Provides self::testGetCompletionUrl().
+     * Provides data to self::testGetContinuationInstruction().
      */
-    public function providerGetCompletionUrl()
+    public function providerGetContinuationInstruction()
     {
-        $url = 'http://example.com' . mt_rand();
+        $instruction = $this->getMock(OperationContinuationInstructionInterface::class);
         return [
-          [$url, $url],
+          [$instruction, $instruction],
           [null, null],
         ];
     }
 
     /**
-     * @covers ::getCompletionUrl
+     * @covers ::getContinuationInstruction
      * @covers ::__construct
      *
-     * @dataProvider providerGetCompletionUrl
+     * @dataProvider providerGetContinuationInstruction
      */
-    public function testGetCompletionUrl($expected, $completionUrl)
+    public function testGetContinuationInstruction($expected, OperationContinuationInstructionInterface $instruction = null)
     {
-        $sut = new OperationResult($completionUrl);
+        $sut = new OperationResult($instruction);
 
-        $this->assertSame($expected, $sut->getCompletionUrl());
+        $this->assertSame($expected, $sut->getContinuationInstruction());
     }
 
 }

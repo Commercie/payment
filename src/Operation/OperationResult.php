@@ -14,32 +14,32 @@ class OperationResult implements OperationResultInterface
 {
 
     /**
-     * The completion URL.
+     * The operation continuation instruction.
      *
-     * @var string|null
-     *   The completion URL, or NULL if the operation cannot or does not need to
-     *   be completed.
+     * @var \BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface|null
+     *   The continuation instruction, or NULL if the operation cannot or does
+     *   not need to be continued.
      */
-    protected $completionUrl;
+    protected $instruction;
 
     /**
      * Constructs a new instance.
      *
-     * @param string|null
-     *   The completion URL, or NULL if the operation cannot or does not need to
-     *   be completed.
+     * @param \BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface $instruction
+     *   The continuation instruction, or NULL if the operation cannot or does
+     *   not need to be continued.
      */
-    public function __construct($completionUrl = null)
+    public function __construct(OperationContinuationInstructionInterface $instruction = null)
     {
-        $this->completionUrl = $completionUrl;
+        $this->instruction = $instruction;
     }
 
     public function isCompleted() {
-        return !is_null($this->completionUrl);
+        return is_null($this->instruction);
     }
 
-    public function getCompletionUrl() {
-        return $this->completionUrl;
+    public function getContinuationInstruction() {
+        return $this->instruction;
     }
 
 }
