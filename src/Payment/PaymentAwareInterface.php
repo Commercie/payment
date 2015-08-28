@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\Payment\PaymentAwareInterface.
+ * Contains \Commercie\Payment\Payment\PaymentAwareInterface.
  */
 
-namespace BartFeenstra\Payment\Payment;
+namespace Commercie\Payment\Payment;
 
 /**
  * Defines a payment-aware object.
@@ -16,7 +16,7 @@ interface PaymentAwareInterface
     /**
      * Sets the payment.
      *
-     * @param \BartFeenstra\Payment\Payment\PaymentInterface $payment
+     * @param \Commercie\Payment\Payment\PaymentInterface $payment
      *
      * @return $this
      */
@@ -25,7 +25,7 @@ interface PaymentAwareInterface
     /**
      * Gets the payment.
      *
-     * @return \BartFeenstra\Payment\Payment\PaymentInterface
+     * @return \Commercie\Payment\Payment\PaymentInterface
      */
     public function getPayment();
 

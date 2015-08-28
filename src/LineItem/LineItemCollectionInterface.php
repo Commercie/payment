@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\LineItem\LineItemCollectionInterface.
+ * Contains \Commercie\LineItem\LineItemCollectionInterface.
  */
 
-namespace BartFeenstra\Payment\LineItem;
+namespace Commercie\Payment\LineItem;
 
 /**
  * Defines a line item collection.
@@ -32,7 +32,7 @@ interface LineItemCollectionInterface
     /**
      * Sets line items.
      *
-     * @param \BartFeenstra\Payment\LineItem\LineItemInterface[] $lineItems
+     * @param \Commercie\Payment\LineItem\LineItemInterface[] $lineItems
      *
      * @return static
      */
@@ -41,7 +41,7 @@ interface LineItemCollectionInterface
     /**
      * Sets a line item.
      *
-     * @param \BartFeenstra\Payment\LineItem\LineItemInterface $lineItem
+     * @param \Commercie\Payment\LineItem\LineItemInterface $lineItem
      *
      * @return static
      */
@@ -60,7 +60,7 @@ interface LineItemCollectionInterface
     /**
      * Gets all line items.
      *
-     * @return \BartFeenstra\Payment\LineItem\LineItemInterface[]
+     * @return \Commercie\Payment\LineItem\LineItemInterface[]
      */
     public function getLineItems();
 
@@ -70,7 +70,7 @@ interface LineItemCollectionInterface
      * @param string $name
      *   The line item's machine name.
      *
-     * @return \BartFeenstra\Payment\LineItem\LineItemInterface
+     * @return \Commercie\Payment\LineItem\LineItemInterface
      */
     public function getLineItem($name);
 

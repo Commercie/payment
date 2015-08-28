@@ -2,16 +2,16 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Tests\Payment\Operation\OperationResultTest.
+ * Contains \Commercie\Tests\Payment\Operation\OperationResultTest.
  */
 
-namespace BartFeenstra\Tests\Payment\Operation;
+namespace Commercie\Tests\Payment\Operation;
 
-use BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface;
-use BartFeenstra\Payment\Operation\OperationResult;
+use Commercie\Payment\Operation\OperationContinuationInstructionInterface;
+use Commercie\Payment\Operation\OperationResult;
 
 /**
- * @coversDefaultClass \BartFeenstra\Payment\Operation\OperationResult
+ * @coversDefaultClass \Commercie\Payment\Operation\OperationResult
  *
  * @group Payment
  */

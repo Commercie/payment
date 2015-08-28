@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\EventDispatcherCollection.
+ * Contains \Commercie\Payment\EventDispatcherCollection.
  */
 
-namespace BartFeenstra\Payment;
+namespace Commercie\Payment;
 
-use BartFeenstra\Payment\Payment\PaymentInterface;
-use BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface;
+use Commercie\Payment\Payment\PaymentInterface;
+use Commercie\Payment\PaymentMethod\PaymentMethodInterface;
 
 /**
  * Dispatches events to a collection of event dispatchers.
@@ -19,14 +19,14 @@ class EventDispatcherCollection implements EventDispatcherInterface
     /**
      * The event dispatchers.
      *
-     * @var \BartFeenstra\Payment\EventDispatcherInterface[]
+     * @var \Commercie\Payment\EventDispatcherInterface[]
      */
     protected $eventDispatchers = [];
 
     /**
      * Adds an event dispatcher to the collection.
      *
-     * @param \BartFeenstra\Payment\EventDispatcherInterface $eventDispatcher
+     * @param \Commercie\Payment\EventDispatcherInterface $eventDispatcher
      *
      * @return $this
      */

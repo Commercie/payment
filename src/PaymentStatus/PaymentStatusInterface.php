@@ -2,12 +2,12 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\PaymentStatus\PaymentStatusInterface.
+ * Contains \Commercie\Payment\PaymentStatus\PaymentStatusInterface.
  */
 
-namespace BartFeenstra\Payment\PaymentStatus;
+namespace Commercie\Payment\PaymentStatus;
 
-use BartFeenstra\Payment\Payment\PaymentAwareInterface;
+use Commercie\Payment\Payment\PaymentAwareInterface;
 
 /**
  * Defines a payment status.

@@ -2,16 +2,16 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Tests\Payment\Payment\PaymentAwareTraitTest.
+ * Contains \Commercie\Tests\Payment\Payment\PaymentAwareTraitTest.
  */
 
-namespace BartFeenstra\Tests\Payment\Operation;
+namespace Commercie\Tests\Payment\Operation;
 
-use BartFeenstra\Payment\Payment\PaymentAwareTrait;
-use BartFeenstra\Payment\Payment\PaymentInterface;
+use Commercie\Payment\Payment\PaymentAwareTrait;
+use Commercie\Payment\Payment\PaymentInterface;
 
 /**
- * @coversDefaultClass \BartFeenstra\Payment\Payment\PaymentAwareTrait
+ * @coversDefaultClass \Commercie\Payment\Payment\PaymentAwareTrait
  *
  * @group Payment
  */
@@ -26,7 +26,7 @@ class PaymentAwareTraitTest extends \PHPUnit_Framework_TestCase
     {
         $payment = $this->getMock(PaymentInterface::class);
 
-        /** @var \BartFeenstra\Payment\Payment\PaymentAwareTrait $sut */
+        /** @var \Commercie\Payment\Payment\PaymentAwareTrait $sut */
         $sut = $this->getMockForTrait(PaymentAwareTrait::class);
 
         $this->assertSame($sut, $sut->setPayment($payment));

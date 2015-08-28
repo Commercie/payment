@@ -2,20 +2,20 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface.
+ * Contains \Commercie\Payment\PaymentMethod\PaymentMethodInterface.
  */
 
-namespace BartFeenstra\Payment\PaymentMethod;
+namespace Commercie\Payment\PaymentMethod;
 
-use BartFeenstra\Payment\Payment\PaymentAwareInterface;
+use Commercie\Payment\Payment\PaymentAwareInterface;
 
 /**
  * Defines a payment method.
  *
  * Implementations can additionally implement the following interfaces:
- * - \BartFeenstra\Payment\PaymentMethod\PaymentMethodCapturePaymentInterface:
+ * - \Commercie\Payment\PaymentMethod\PaymentMethodCapturePaymentInterface:
  *   This interface lets payment methods capture payments.
- * - \BartFeenstra\Payment\PaymentMethod\PaymentMethodCapturePaymentInterface:
+ * - \Commercie\Payment\PaymentMethod\PaymentMethodCapturePaymentInterface:
  *   This interface lets payment methods refund payments.
  */
 interface PaymentMethodInterface extends PaymentAwareInterface
@@ -25,7 +25,7 @@ interface PaymentMethodInterface extends PaymentAwareInterface
      * Checks if the payment can be executed.
      *
      * Implementations MUST call
-     * \BartFeenstra\Payment\EventDispatcher::canExecutePayment().
+     * \Commercie\Payment\EventDispatcher::canExecutePayment().
      *
      * @return bool
      *   Whether the payment method can execute the payment.
@@ -40,9 +40,9 @@ interface PaymentMethodInterface extends PaymentAwareInterface
      * return value of self::getExecutePaymentResult().
      *
      * Implementations MUST call
-     * \BartFeenstra\Payment\EventDispatcher::preExecutePayment().
+     * \Commercie\Payment\EventDispatcher::preExecutePayment().
      *
-     * @return \BartFeenstra\Payment\Operation\OperationResultInterface
+     * @return \Commercie\Payment\Operation\OperationResultInterface
      *
      * @see self::canExecutePayment
      */
@@ -51,7 +51,7 @@ interface PaymentMethodInterface extends PaymentAwareInterface
     /**
      * Gets the payment execution result.
      *
-     * @return \BartFeenstra\Payment\Operation\OperationResultInterface
+     * @return \Commercie\Payment\Operation\OperationResultInterface
      */
     public function getExecutePaymentResult();
 

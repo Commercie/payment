@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\EventDispatcherInterface.
+ * Contains \Commercie\Payment\EventDispatcherInterface.
  */
 
-namespace BartFeenstra\Payment;
+namespace Commercie\Payment;
 
-use BartFeenstra\Payment\Payment\PaymentInterface;
-use BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface;
+use Commercie\Payment\Payment\PaymentInterface;
+use Commercie\Payment\PaymentMethod\PaymentMethodInterface;
 
 /**
  * Defines an event dispatcher.
@@ -23,7 +23,7 @@ interface EventDispatcherInterface
     /**
      * Responds to a new payment status being set.
      *
-     * @param \BartFeenstra\Payment\Payment\PaymentInterface $payment
+     * @param \Commercie\Payment\Payment\PaymentInterface $payment
      *   The payment on which the new status has been set.
      */
     public function postPaymentStatusChange(PaymentInterface $payment);
@@ -31,7 +31,7 @@ interface EventDispatcherInterface
     /**
      * Checks whether a payment method can execute a payment.
      *
-     * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
+     * @param \Commercie\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will execute the payment.
      *
      * @return bool|null
@@ -43,7 +43,7 @@ interface EventDispatcherInterface
     /**
      * Fires right before a payment will be executed.
      *
-     * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
+     * @param \Commercie\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will execute the payment.
      */
     public function preExecutePayment(PaymentMethodInterface $paymentMethod);
@@ -51,7 +51,7 @@ interface EventDispatcherInterface
     /**
      * Checks whether a payment method can capture a payment.
      *
-     * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
+     * @param \Commercie\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will capture the payment.
      *
      * @return |null
@@ -63,7 +63,7 @@ interface EventDispatcherInterface
     /**
      * Fires right before a payment will be captured.
      *
-     * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
+     * @param \Commercie\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will capture the payment.
      */
     public function preCapturePayment(PaymentMethodInterface $paymentMethod);
@@ -71,7 +71,7 @@ interface EventDispatcherInterface
     /**
      * Checks whether a payment method can refund a payment.
      *
-     * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
+     * @param \Commercie\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will refund the payment.
      *
      * @return |null
@@ -83,7 +83,7 @@ interface EventDispatcherInterface
     /**
      * Fires right before a payment will be refunded.
      *
-     * @param \BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
+     * @param \Commercie\Payment\PaymentMethod\PaymentMethodInterface $paymentMethod
      *   The payment method that will refund the payment.
      */
     public function preRefundPayment(PaymentMethodInterface $paymentMethod);

@@ -2,12 +2,12 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\LineItem\LineItemInterface.
+ * Contains \Commercie\Payment\LineItem\LineItemInterface.
  */
 
-namespace BartFeenstra\Payment\LineItem;
+namespace Commercie\Payment\LineItem;
 
-use BartFeenstra\Payment\Payment\PaymentAwareInterface;
+use Commercie\Payment\Payment\PaymentAwareInterface;
 
 /**
  * Defines a payment line item.

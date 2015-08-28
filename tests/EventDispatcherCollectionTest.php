@@ -2,18 +2,18 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Tests\Payment\EventDispatcherCollectionTest.
+ * Contains \Commercie\Tests\Payment\EventDispatcherCollectionTest.
  */
 
-namespace BartFeenstra\Tests\Payment;
+namespace Commercie\Tests\Payment;
 
-use BartFeenstra\Payment\EventDispatcherCollection;
-use BartFeenstra\Payment\EventDispatcherInterface;
-use BartFeenstra\Payment\Payment\PaymentInterface;
-use BartFeenstra\Payment\PaymentMethod\PaymentMethodInterface;
+use Commercie\Payment\EventDispatcherCollection;
+use Commercie\Payment\EventDispatcherInterface;
+use Commercie\Payment\Payment\PaymentInterface;
+use Commercie\Payment\PaymentMethod\PaymentMethodInterface;
 
 /**
- * @coversDefaultClass \BartFeenstra\Payment\EventDispatcherCollection
+ * @coversDefaultClass \Commercie\Payment\EventDispatcherCollection
  *
  * @group Payment
  */
@@ -23,7 +23,7 @@ class EventDispatcherCollectionTest extends \PHPUnit_Framework_TestCase
     /**
      * The subject under test.
      *
-     * @var \BartFeenstra\Payment\EventDispatcherCollection
+     * @var \Commercie\Payment\EventDispatcherCollection
      */
     protected $sut;
 

@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\PaymentMethod\PaymentMethodRefundPaymentInterface.
+ * Contains \Commercie\Payment\PaymentMethod\PaymentMethodRefundPaymentInterface.
  */
 
-namespace BartFeenstra\Payment\PaymentMethod;
+namespace Commercie\Payment\PaymentMethod;
 
 /**
  * Defines a payment method that can refund payments.
@@ -17,7 +17,7 @@ interface PaymentMethodRefundPaymentInterface extends PaymentMethodInterface
      * Checks if the payment can be refunded.
      *
      * Implementations MUST call
-     * \BartFeenstra\Payment\EventDispatcher::canRefundPayment().
+     * \Commercie\Payment\EventDispatcher::canRefundPayment().
      *
      * @return bool
      *   Whether the payment method can refund the payment.
@@ -30,9 +30,9 @@ interface PaymentMethodRefundPaymentInterface extends PaymentMethodInterface
      * Refunds the payment.
      *
      * Implementations MUST call
-     * \BartFeenstra\Payment\EventDispatcher::preRefundPayment().
+     * \Commercie\Payment\EventDispatcher::preRefundPayment().
      *
-     * @return \BartFeenstra\Payment\Operation\OperationResultInterface
+     * @return \Commercie\Payment\Operation\OperationResultInterface
      *
      * @see self::refundPaymentAccess
      */
@@ -41,7 +41,7 @@ interface PaymentMethodRefundPaymentInterface extends PaymentMethodInterface
     /**
      * Gets the payment refund status.
      *
-     * @return \BartFeenstra\Payment\Operation\OperationResultInterface
+     * @return \Commercie\Payment\Operation\OperationResultInterface
      */
     public function getRefundPaymentResult();
 

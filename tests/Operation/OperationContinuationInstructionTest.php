@@ -2,15 +2,15 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Tests\Payment\Operation\OperationContinuationInstructionTest.
+ * Contains \Commercie\Tests\Payment\Operation\OperationContinuationInstructionTest.
  */
 
-namespace BartFeenstra\Tests\Payment\Operation;
+namespace Commercie\Tests\Payment\Operation;
 
-use BartFeenstra\Payment\Operation\OperationContinuationInstruction;
+use Commercie\Payment\Operation\OperationContinuationInstruction;
 
 /**
- * @coversDefaultClass \BartFeenstra\Payment\Operation\OperationContinuationInstruction
+ * @coversDefaultClass \Commercie\Payment\Operation\OperationContinuationInstruction
  *
  * @group Payment
  */

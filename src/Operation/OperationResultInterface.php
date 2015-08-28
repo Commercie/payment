@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\Operation\OperationResultInterface.
+ * Contains \Commercie\Payment\Operation\OperationResultInterface.
  */
 
-namespace BartFeenstra\Payment\Operation;
+namespace Commercie\Payment\Operation;
 
 /**
  * Defines an operation result.
@@ -24,7 +24,7 @@ interface OperationResultInterface
     /**
      * Gets the instruction to continue the operation.
      *
-     * @return \BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface|null
+     * @return \Commercie\Payment\Operation\OperationContinuationInstructionInterface|null
      *   An instruction (only if self::isCompleted() returns FALSE) or NULL if
      *   the operation cannot be continued (anymore).
      */

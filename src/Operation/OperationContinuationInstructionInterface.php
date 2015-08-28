@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface.
+ * Contains \Commercie\Payment\Operation\OperationContinuationInstructionInterface.
  */
 
-namespace BartFeenstra\Payment\Operation;
+namespace Commercie\Payment\Operation;
 
 /**
  * Defines an operation continuation instruction.

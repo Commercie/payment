@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Contains \BartFeenstra\Payment\Payment\PaymentAwareTrait.
+ * Contains \Commercie\Payment\Payment\PaymentAwareTrait.
  */
 
-namespace BartFeenstra\Payment\Payment;
+namespace Commercie\Payment\Payment;
 
 /**
- * Provides a default implementation of \BartFeenstra\Payment\Payment\PaymentAwareInterface.
+ * Provides a default implementation of \Commercie\Payment\Payment\PaymentAwareInterface.
  */
 trait PaymentAwareTrait
 {
@@ -15,12 +15,12 @@ trait PaymentAwareTrait
     /**
      * The payment.
      *
-     * @var \BartFeenstra\Payment\Payment\PaymentInterface
+     * @var \Commercie\Payment\Payment\PaymentInterface
      */
     protected $payment;
 
     /**
-     * Implements \BartFeenstra\Payment\Payment\PaymentAwareInterface::getPayment().
+     * Implements \Commercie\Payment\Payment\PaymentAwareInterface::getPayment().
      */
     public function getPayment()
     {
@@ -28,7 +28,7 @@ trait PaymentAwareTrait
     }
 
     /**
-     * Implements \BartFeenstra\Payment\Payment\PaymentAwareInterface::setPayment().
+     * Implements \Commercie\Payment\Payment\PaymentAwareInterface::setPayment().
      */
     public function setPayment(PaymentInterface $payment)
     {

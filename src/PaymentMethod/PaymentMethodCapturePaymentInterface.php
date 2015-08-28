@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\PaymentMethod\PaymentMethodCapturePaymentInterface.
+ * Contains \Commercie\Payment\PaymentMethod\PaymentMethodCapturePaymentInterface.
  */
 
-namespace BartFeenstra\Payment\PaymentMethod;
+namespace Commercie\Payment\PaymentMethod;
 
 /**
  * Defines a payment method that can capture authorized payments.
@@ -17,7 +17,7 @@ interface PaymentMethodCapturePaymentInterface extends PaymentMethodInterface
      * Checks if the payment can be captured.
      *
      * Implementations MUST call
-     * \BartFeenstra\Payment\EventDispatcher::canCapturePayment().
+     * \Commercie\Payment\EventDispatcher::canCapturePayment().
      *
      * @return bool
      *   Whether the payment method can capture the payment.
@@ -30,9 +30,9 @@ interface PaymentMethodCapturePaymentInterface extends PaymentMethodInterface
      * Captures the payment.
      *
      * Implementations MUST call
-     * \BartFeenstra\Payment\EventDispatcher::preCapturePayment().
+     * \Commercie\Payment\EventDispatcher::preCapturePayment().
      *
-     * @return \BartFeenstra\Payment\Operation\OperationResultInterface
+     * @return \Commercie\Payment\Operation\OperationResultInterface
      *
      * @see self::capturePaymentAccess
      */
@@ -41,7 +41,7 @@ interface PaymentMethodCapturePaymentInterface extends PaymentMethodInterface
     /**
      * Gets the payment capture status.
      *
-     * @return \BartFeenstra\Payment\Operation\OperationResultInterface
+     * @return \Commercie\Payment\Operation\OperationResultInterface
      */
     public function getCapturePaymentResult();
 

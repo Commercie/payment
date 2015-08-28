@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \BartFeenstra\Payment\Operation\OperationResult.
+ * Contains \Commercie\Payment\Operation\OperationResult.
  */
 
-namespace BartFeenstra\Payment\Operation;
+namespace Commercie\Payment\Operation;
 
 /**
  * Provides an operation result.
@@ -16,7 +16,7 @@ class OperationResult implements OperationResultInterface
     /**
      * The operation continuation instruction.
      *
-     * @var \BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface|null
+     * @var \Commercie\Payment\Operation\OperationContinuationInstructionInterface|null
      *   The continuation instruction, or NULL if the operation cannot or does
      *   not need to be continued.
      */
@@ -25,7 +25,7 @@ class OperationResult implements OperationResultInterface
     /**
      * Constructs a new instance.
      *
-     * @param \BartFeenstra\Payment\Operation\OperationContinuationInstructionInterface $instruction
+     * @param \Commercie\Payment\Operation\OperationContinuationInstructionInterface $instruction
      *   The continuation instruction, or NULL if the operation cannot or does
      *   not need to be continued.
      */
