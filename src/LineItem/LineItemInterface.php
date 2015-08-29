@@ -16,19 +16,18 @@ interface LineItemInterface extends PaymentAwareInterface
 {
 
     /**
-     * Gets the amount.
+     * Gets the line item's total amount.
      *
-     * @return float|int|string
-     *   A numeric value.
+     * @return \Commercie\Money\AmountInterface
      */
     public function getAmount();
 
     /**
-     * Return this line item's total amount.
+     * Gets theline item's unit amount.
      *
-     * @return float
+     * @return \Commercie\Money\AmountInterface
      */
-    function getTotalAmount();
+    public function getUnitAmount();
 
     /**
      * Sets the machine name.
@@ -52,13 +51,6 @@ interface LineItemInterface extends PaymentAwareInterface
      * @return string
      */
     public function getDescription();
-
-    /**
-     * Gets the currency_code.
-     *
-     * @return string
-     */
-    public function getCurrencyCode();
 
     /**
      * Sets the quantity.

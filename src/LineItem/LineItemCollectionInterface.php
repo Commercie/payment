@@ -14,20 +14,11 @@ interface LineItemCollectionInterface
 {
 
     /**
-     * Sets the line items' ISO 4217 currency code.
+     * Gets the line items' total amount.
      *
-     * @param string $currencyCode
-     *
-     * @return static
+     * @return \Commercie\Money\AmountInterface
      */
-    public function setCurrencyCode($currencyCode);
-
-    /**
-     * Gets the line items' ISO 4217 currency code.
-     *
-     * @return string
-     */
-    public function getCurrencyCode();
+    public function getAmount();
 
     /**
      * Sets line items.
@@ -73,13 +64,5 @@ interface LineItemCollectionInterface
      * @return \Commercie\Payment\LineItem\LineItemInterface
      */
     public function getLineItem($name);
-
-    /**
-     * Gets the line items' total amount.
-     *
-     * @return float|int|string
-     *   A numeric value.
-     */
-    public function getTotalAmount();
 
 }
