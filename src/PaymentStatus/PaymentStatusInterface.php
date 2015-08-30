@@ -34,48 +34,10 @@ interface PaymentStatusInterface extends PaymentAwareInterface
     public function getStatusTime();
 
     /**
-     * Gets this payment status's ancestors.
+     * Gets the status' type.
      *
-     * @return string[]
-     *   The IDs of this status's ancestors.
+     * @return \Commercie\Payment\PaymentStatus\PaymentStatusTypeInterface
      */
-    function getAncestorIds();
-
-    /**
-     * Gets this payment status's children.
-     *
-     * @return string[]
-     *   The IDs of this status's direct children.
-     */
-    public function getChildIds();
-
-    /**
-     * Get this payment status's descendants.
-     *
-     * @return string[]
-     *   The IDs of this status's descendants.
-     */
-    function getDescendantIds();
-
-    /**
-     * Checks if the status has a given other status as one of its ancestors.
-     *.
-     * @param string $paymentStatusId
-     *   The payment status ID to check against.
-     *
-     * @return boolean
-     */
-    function hasAncestor($paymentStatusId);
-
-    /**
-     * Checks if the status is equal to a given other status or has it one of
-     * its ancestors.
-     *
-     * @param string $paymentStatusId
-     *   The payment status ID to check against.
-     *
-     * @return boolean
-     */
-    function isOrHasAncestor($paymentStatusId);
+    public function getType();
 
 }
